@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Про мене.
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Про itnews!</h1>
+    <p style="text-align: center">Сайт itnews призначений для того, щоб допомогти користувачам залишатися в курсі
+        останніх новин і
+        тенденцій у світі технологій. <br>
+        Дякуємо за використання сайту itnews. Надіємося, що наша інформація допомагає вам залишатися в курсі останніх
+        технологічних новин та подій.</p>
+    <a href="{% url 'home' %}" class="btn btn-danger">На головну</a>
+</div>
+{% endblock %}

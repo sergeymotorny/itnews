@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Новини на сайтi {% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Новини</h1>
+
+    <!--    Notification that there are no entries!    -->
+    {% if news %}
+    {% for element in news %}
+    <div class="alert alert-warning">
+        <h3>{{ element.title }}</h3>
+        <p>{{ element.anons }}</p>
+        <a href="{% url 'news-detail' element.id %}" class="btn btn-warning">Читати докладніше </a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>Записи відсутні!</p>
+    {% endif %}
+
+</div>
+{% endblock %}
